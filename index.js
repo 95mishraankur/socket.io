@@ -4,7 +4,7 @@ import axios from "axios";
 // dotenv.config();
 const io = new Server({
   cors: {
-    origin: "http://127.0.0.1:3333",
+    origin: "https://maintcontrolapp.frb.io",
   },
 });
 
