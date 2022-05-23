@@ -1,5 +1,7 @@
 import { Server } from "socket.io";
 import axios from "axios";
+const dotenv = require('dotenv');
+dotenv.config();
 const io = new Server({
   cors: {
     origin: "http://127.0.0.1:3333",
@@ -56,4 +58,4 @@ io.on("connection", (socket) => {
   });
 });
 
-io.listen(6000);
+io.listen(process.env.PORT || 6000);
